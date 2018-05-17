@@ -1224,6 +1224,8 @@ if [ "$Audit5_7" = "1" ]; then
 		   echo $(date -u) "5.7 passed due to remediation" | tee -a "$logFile"
 		   defaults write "$plistlocation" OrgScore5_7 -bool false
 		else
+			echo "* 5.7 Do Not enable the "root" account" >> "$auditfilelocation"
+			echo $(date -u) "5.7 fix" | tee -a "$logFile"
 	fi
 fi
 
